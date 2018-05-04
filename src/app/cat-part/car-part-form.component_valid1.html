@@ -1,0 +1,67 @@
+<div class="container">
+<h3 class="text-center"> CarPart Registration(valid check) </h3>
+<form  #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+
+    <table  class="table table-bordered table table-hover">
+        <tr>
+            <td>Id :</td>
+            <td>
+                <input type="text" name="id" ngModel #id="ngModel" required><br>
+                <div *ngIf="id.touched"  [hidden]="id.valid" style="alert alert-danger">
+                    **Id is required
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>name :</td>
+            <td>
+                <input type="text" name="name" ngModel #name="ngModel" required>
+                <div *ngIf="name.touched"  [hidden]="name.valid" style="alert alert-danger">
+                    Name is required
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>description :</td>
+            <td>
+                <input type="text" name="description"  ngModel #description="ngModel" required>
+                <div *ngIf="description.touched"  [hidden]="description.valid" style="alert alert-danger">
+                    description is required
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>price :</td>
+            <td>
+                <input type="number" name="price" ngModel #price="ngModel" required>
+                <div *ngIf="price.touched"  [hidden]="price.valid" style="alert alert-danger">
+                    price is required
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>quantity :</td>
+            <td>
+                <input type="number" name="quantity"  ngModel #quantity="ngModel" required>
+                <div *ngIf="quantity.touched"  [hidden]="quantity.valid" style="alert alert-danger">
+                    quantity is required
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"  class="text-center">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <div style="background-color:gray">
+    <div [innerText]="'Id:' + id.value "></div>
+    <div [innerText]="'name:' + name.value"></div>
+        <div [innerText]="'description:' + description.value"></div>
+    <div [innerText]="'price:' + price.value"></div>
+    <div [innerText]="'quantity:' + quantity.value"></div>
+    </div>
+</form>
+</div>

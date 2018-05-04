@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(#0d263c,#030714) no-repeat fixed;
+  background: linear-gradient(#0d263c,#030714) no-repeat fixed;
+  color: #ffffff;
+  height: 100%;
+  margin: 0;
+}
+img {
+  height: 10em;
+  width: 10em;
+}
+
+h3 {
+  color: #9397d8;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0;
+  padding: 20px;
+}
+
+header h1 {
+  color: #66d9f7;
+}
+header h2 {
+  color: #009900;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 900px;
+}
+
